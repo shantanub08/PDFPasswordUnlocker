@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-23T18:01:26Z",
+  "title": "Design System: PDF Password Unlocker",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Electric Indigo", "canonical": "oklch(0.62 0.22 270)" },
+      "primary-hover": { "role": "primary", "displayName": "Deep Indigo Hover", "canonical": "oklch(0.55 0.24 270)" },
+      "neutral-bg": { "role": "neutral", "displayName": "Deep Slate Canvas", "canonical": "oklch(0.18 0.04 260)" },
+      "neutral-surface": { "role": "neutral", "displayName": "Midnight Indigo Base", "canonical": "oklch(0.20 0.08 275)" },
+      "text-primary": { "role": "neutral", "displayName": "Pure Slate Ink", "canonical": "oklch(0.98 0.005 250)" },
+      "text-secondary": { "role": "neutral", "displayName": "Muted Slate Ink", "canonical": "oklch(0.70 0.02 250)" },
+      "error": { "role": "feedback", "displayName": "Crimson Alert", "canonical": "oklch(0.63 0.22 25)" },
+      "success": { "role": "feedback", "displayName": "Emerald Success", "canonical": "oklch(0.70 0.17 160)" }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "Header title text" },
+      "body": { "displayName": "Body", "purpose": "Primary readable text" },
+      "label": { "displayName": "Label", "purpose": "Form inputs and subtitles" }
+    },
+    "shadows": [
+      { "name": "ambient-glow", "value": "0 25px 50px -12px rgba(0, 0, 0, 0.5)", "purpose": "Card ambient depth" },
+      { "name": "button-lift", "value": "0 4px 12px rgba(99, 102, 241, 0.3)", "purpose": "Primary button hover glow" }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "all 0.2s ease", "purpose": "Interactive state transitions" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Unlock Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action button to decrypt and unlock PDF file.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\"></rect><path d=\"M7 11V7a5 5 0 0 1 9.9-1\"></path></svg> <span>Unlock PDF</span></button>",
+      "css": ".ds-btn-primary { background: #6366f1; color: #ffffff; padding: 1rem; border-radius: 0.5rem; font-weight: 600; font-size: 1rem; cursor: pointer; border: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; transition: all 0.2s ease; } .ds-btn-primary:hover { background: #4f46e5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); }"
+    },
+    {
+      "name": "Dropzone Container",
+      "kind": "card",
+      "refersTo": "card-dropzone",
+      "description": "Drag and drop area for uploading PDF documents.",
+      "html": "<div class=\"ds-dropzone\"><svg class=\"ds-dropzone-icon\" width=\"48\" height=\"48\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242\"></path><path d=\"M12 12v9\"></path><path d=\"m16 16-4-4-4 4\"></path></svg><div class=\"ds-dropzone-text\">Click or drag & drop a PDF here</div><div class=\"ds-dropzone-subtext\">Maximum file size depends on your device's memory</div></div>",
+      "css": ".ds-dropzone { border: 2px dashed rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 3rem 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; cursor: pointer; transition: all 0.3s ease; background: rgba(15, 23, 42, 0.3); } .ds-dropzone:hover { border-color: #6366f1; background: rgba(99, 102, 241, 0.05); } .ds-dropzone-icon { color: #6366f1; } .ds-dropzone-text { font-weight: 500; color: #f8fafc; } .ds-dropzone-subtext { font-size: 0.875rem; color: #94a3b8; }"
+    },
+    {
+      "name": "Password Input",
+      "kind": "input",
+      "refersTo": "input-password",
+      "description": "Secure input field for entering the PDF password.",
+      "html": "<div class=\"ds-input-group\"><label for=\"ds-pwd\">PDF Password</label><input id=\"ds-pwd\" type=\"password\" class=\"ds-password-input\" placeholder=\"Enter the password to unlock\" /></div>",
+      "css": ".ds-input-group { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; text-align: left; } .ds-input-group label { font-size: 0.875rem; font-weight: 500; color: #94a3b8; } .ds-password-input { width: 100%; padding: 0.875rem 1rem; border-radius: 0.5rem; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(15, 23, 42, 0.8); color: #f8fafc; font-size: 1rem; outline: none; transition: all 0.2s ease; } .ds-password-input:focus { border-color: #6366f1; box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Tactical Glass Vault",
+    "overview": "PDF Password Unlocker is designed as a dark, high-clarity slate workspace with translucent glass panels, crisp typography, and glowing indigo focus states.",
+    "keyCharacteristics": [
+      "Dark slate background with subtle radial gradient depth",
+      "Glassmorphic container cards with 12px backdrop blur",
+      "High-contrast typography with indigo-tinted gradient display headers"
+    ],
+    "rules": [
+      { "name": "The Single Accent Rule", "body": "Electric Indigo is reserved strictly for primary actions, active focus states, and key state transitions.", "section": "colors" },
+      { "name": "The Fixed-Scale Rule", "body": "Typography uses fixed rem sizing rather than fluid clamp() functions to preserve tool density.", "section": "typography" },
+      { "name": "The Tonal Glass Rule", "body": "Card surfaces rely on 12px backdrop blur and 1px translucent borders to establish hierarchy.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do maintain a strict 4.5:1 minimum text contrast ratio against dark backgrounds.",
+      "Do use native inline feedback alerts for decryption errors instead of intrusive popups.",
+      "Do keep the file unlock flow restricted to a single screen without multi-step wizard pagination."
+    ],
+    "donts": [
+      "Don't use generic white SaaS backgrounds with light blue accent buttons.",
+      "Don't introduce multi-colored card borders or side-stripe accents.",
+      "Don't open popups or modal overlays for simple file operations or password prompts."
+    ]
+  }
+}
